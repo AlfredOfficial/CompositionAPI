@@ -59,4 +59,5 @@ src/
 
 This project is for educational/demo
 
+Sample Image
 <img width="960" height="540" alt="compositionapi" src="https://github.com/user-attachments/assets/325d47cd-47d6-4b3d-b3a9-597b6577c321" />
