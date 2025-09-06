@@ -1,4 +1,7 @@
 <script setup>
+import PostItem from '@/components/PostItem.vue';
+import Wrapper from '@/components/Wrapper.vue';
+
 const posts = [
   {
     "userId": 1,
@@ -102,90 +105,9 @@ const posts = [
 <template>
   <main>
     <div v-for="post in posts" :key="post.id">
-    <div class="wrapper">
-      <div class="header">
-        <span>Written by {{ post.name }} on {{ post.date }}</span>
-        <div>
-          <button class="del material-icons">delete</button>
-          <button class="save material-icons">bookmark_border</button>
-        </div>
-      </div>
-      <h2>{{ post.title }}</h2>
-      <p>{{ post.body }}</p>
-    </div>
+      <Wrapper>
+        <PostItem :post="post"></PostItem>
+      </Wrapper>
     </div>
   </main>
 </template>
-
-<style lang="scss" scoped>
-.wrapper {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-
-    span {
-      font-size: 0.95rem;
-      color: #888;
-    }
-
-    div {
-      display: flex;
-      gap: 0.5rem;
-
-      button {
-        border: none;
-        background: #f5f5f5;
-        color: #444;
-        padding: 0.5rem 1rem;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: background 0.2s;
-
-        &.del {
-          background: #ffeaea;
-          color: #d32f2f;
-
-          &:hover {
-            background: #ffcccc;
-          }
-        }
-
-        &.save {
-          background: #eafaf1;
-          color: #388e3c;
-
-          &:hover {
-            background: #c8f7e2;
-          }
-        }
-
-        &.material-icons {
-          font-family: 'Material Icons', sans-serif;
-        }
-      }
-    }
-  }
-
-  h2 {
-    margin-top: 0;
-    font-size: 2rem;
-    color: #222;
-  }
-
-  p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 0;
-  }
-}
-</style>
