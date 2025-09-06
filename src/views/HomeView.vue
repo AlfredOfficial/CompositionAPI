@@ -104,10 +104,10 @@ const posts = [
 
 <template>
   <main>
-    <div v-for="post in posts" :key="post.id">
-      <Wrapper>
-        <PostItem :post="post"></PostItem>
-      </Wrapper>
-    </div>
+    <Wrapper>
+      <div v-for="post in posts" :key="post.id">
+          <PostItem :post="post"></PostItem>
+      </div>
+    </Wrapper>
   </main>
 </template>
