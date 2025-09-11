@@ -66,4 +66,4 @@ Sample Image
 ![alt text](v-for-vslots.PNG)
 
 ### For Activity 6 About "Router"
-![alt text](v-slots.PNG)
+![alt text](router_act6.PNG)
